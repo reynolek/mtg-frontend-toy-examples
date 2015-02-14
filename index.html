@@ -9,12 +9,29 @@
     <script src="bower_components/backbone/backbone.js"></script>
     <script src="models/card.js"></script>
     <script src="collections/cards.js"></script>
+    <script src="mtg-cardinfo.tag" type="riot/tag"></script>
+    <script src="mtg-card.tag" type="riot/tag"></script>
     <script src="mtg-cardlist.tag" type="riot/tag"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <title></title>
 </head>
 <body>
     <mtg-cardlist></mtg-cardlist>
 
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         riot.mount('*');
     </script>
