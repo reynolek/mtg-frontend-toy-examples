@@ -6,6 +6,7 @@
 
     var App = {
         Collections: {},
+        Components: {},
         Models: {}
     };
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/JSXTransformer.js"></script>
+    <script src="app.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="models/card.js"></script>
+    <script src="collections/cards.js"></script>
+    <script src="react/mtg-cardlist.react.js" type="text/jsx"></script>
+    <script src="react/mtg-card.react.js" type="text/jsx"></script>
+    <script src="react/mtg-modal.react.js" type="text/jsx"></script>
+    <script src="react/mtg-cardinfo.react.js" type="text/jsx"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="content"></div>
+    <div id="modal"></div>
+
+<script type="text/jsx">
+    //var MtgCardList = App.Components.MtgCardList;
+    React.render(
+            <App.Components.MtgCardList />,
+            document.getElementById("content")
+    );
+
+</script>
+<script type="text/jsx">
+
+</script>
+</body>
+</html>
