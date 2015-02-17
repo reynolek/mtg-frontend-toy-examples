@@ -1,0 +1,39 @@
+<polymer-element name="mtg-cardlist">
+    <template>
+        <div>
+            <div style="float: left; width:15%">
+                <ul class="mtg-card-list">
+                    <template repeat="{{model in cards.models}}">
+                        <li>{{getName(model)}}</li>
+                    </template>
+                </ul>
+            </div>
+            <div style="float: left;">
+                <img src="http://mtgimage.com/card/cardback.jpg" style="height: 300px" />
+            </div>
+            <div style="clear: both;float: left">
+                <button>Fetch</button>
+                <button>Output current collection</button>
+            </div>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            ready: function() {
+                var self = this;
+                this.cards = new App.Collections.Cards();
+                this.cards.url = "http://api.mtgapi.com/v2/booster/ktk";
+
+                var success = function(coll, resp) {
+                    console.log(self.cards.models);
+                };
+
+                this.cards.fetch({success:success});
+            },
+            getName: function(model) {
+                // this feels really stupid.
+                return model.get('name');
+            }
+        });
+    </script>
+</polymer-element>
