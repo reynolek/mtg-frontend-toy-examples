@@ -1,0 +1,16 @@
+<polymer-element name="mtg-card" attributes="model">
+    <template>
+        <li on-click={{show_modal}} on-mouseover={{hover}} data-type-cid={{cid}}>{{name}}</li>
+    </template>
+    <script>
+        Polymer({
+            publish: {
+                model: {}
+            },
+            ready: function() {
+                this.cid = this.model.get('cid');
+                this.name = this.model.get('name');
+            }
+        });
+    </script>
+</polymer-element>
